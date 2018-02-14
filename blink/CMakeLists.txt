@@ -11,11 +11,11 @@ set(sources ${CMAKE_CURRENT_SOURCE_DIR}/Loop.cpp
             ${CMAKE_CURRENT_SOURCE_DIR}/Setup.cpp
    )
 add_executable(${PROJECT_NAME} ${sources})
-#target_link_libraries(${PROJECT_NAME} teensy_core)
-#target_compile_options(
-#    ${PROJECT_NAME} PRIVATE
-#    ${compiler_set_2}
-#)
+target_link_libraries(${PROJECT_NAME} teensy_core)
+target_compile_options(
+    ${PROJECT_NAME} PRIVATE
+    ${teensy_compiler_set_cpp}
+)
 #
 #elf_to_bin(${PROJECT_NAME})
 #upload(${PROJECT_NAME} elf_to_bin_${PROJECT_NAME})
