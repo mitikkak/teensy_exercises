@@ -16,6 +16,4 @@ target_compile_options(
     ${PROJECT_NAME} PRIVATE
     ${teensy_compiler_set_cpp}
 )
-#
-#elf_to_bin(${PROJECT_NAME})
-#upload(${PROJECT_NAME} elf_to_bin_${PROJECT_NAME})
+upload_teensy(${PROJECT_NAME} ${PROJECT_NAME})
